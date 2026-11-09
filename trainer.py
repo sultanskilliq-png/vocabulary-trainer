@@ -36,7 +36,9 @@ def quiz(data):
     if user_choies == data['meaning']:
         return True
     
+    data['wrong']+=1
     return 'wrong'
+    
 
     
     
@@ -47,10 +49,12 @@ def quiz(data):
 
 words = load_words()
 # words.append(add_word())
-# save_words(words)
+save_words(words)
 choes = pick_word(words)
 result = quiz(choes)
+save_words(words)
 print(result)
+print(words)
 
 
 
