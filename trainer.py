@@ -23,16 +23,34 @@ def load_words():
 def pick_word(data):
 
     word = random.choice(data)
-    return word ['word']
+    return word 
+
+def quiz(data):
+
+    choes = data['word']
+    
+    print(choes)
+
+    user_choies = input('write your mening: ')
+
+    if user_choies == data['meaning']:
+        return True
+    
+    return 'wrong'
+
+    
+    
+
+    
 
 
 
-# words = load_words()
+words = load_words()
 # words.append(add_word())
 # save_words(words)
-# choes = pick_word(words)
-# print(choes)
-
+choes = pick_word(words)
+result = quiz(choes)
+print(result)
 
 
 
