@@ -1,5 +1,5 @@
 import json
-
+import random
 def add_word():
     word = input('write your words: ')
     meaning = input('write your meaning: ')
@@ -20,10 +20,18 @@ def load_words():
     except FileNotFoundError:
         return []
   
+def pick_word(data):
+
+    word = random.choice(data)
+    return word ['word']
+
+
 
 # words = load_words()
 # words.append(add_word())
 # save_words(words)
+# choes = pick_word(words)
+# print(choes)
 
 
 
