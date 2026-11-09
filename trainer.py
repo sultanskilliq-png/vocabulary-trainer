@@ -11,7 +11,15 @@ def save_words(words):
     with open('vocabulary-trainer.json', 'w') as f:
         json.dump(words, f)
 
+def load_words():
 
+    try:
+        with open('vocabulary-trainer.json','r') as f:
+            data = json.load(f)
+        return data
+    except FileNotFoundError:
+        return []
+  
 
 # words = load_words()
 # words.append(add_word())
