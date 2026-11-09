@@ -42,19 +42,28 @@ def quiz(data):
 
     
     
+def most_word(data):
+
+
+    weights = []
+    for word in data:
+        weights.append(word["wrong"]+1)
+    pick = random.choices(data,weights=weights)
+
+    return pick[0]
+
 
     
-
-
-
-words = load_words()
+words= load_words()
 # words.append(add_word())
-save_words(words)
-choes = pick_word(words)
-result = quiz(choes)
-save_words(words)
-print(result)
-print(words)
+# save_words(words)
+# choes = pick_word(words)
+# result = quiz(choes)
+# save_words(words)
+# print(result)
+# print(words)
+most_wordd = most_word(words)
+print(most_wordd)
 
 
 
