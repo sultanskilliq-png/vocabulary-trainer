@@ -59,24 +59,47 @@ def stats(data):
 
 
     
-    result= sorted(data,key=lambda s:s['wrong'],reverse=True)[:2]
+    result= sorted(data,key=lambda s:s['wrong'],reverse=True)[:5]
     return result
 
 
+
+def menu():
+    words = load_words() 
+
+    while True:
+        user = input('add, quiz, repeted, total,  , q: ')
+
+        if user == 'add':
     
-words= load_words()
-# words.append(add_word())
-# save_words(words)
-# choes = pick_word(words)
-# result = quiz(choes)
-# save_words(words)
-# print(result)
-# print(words)
-most_wordd = most_word(words)
-# print(most_wordd)
-top =stats(words)
-print("Total:", len(words))
-print("Hardest:", top)
+            words.append(add_word())
+            save_words(words)
+
+        elif user == 'quiz':
+            for i in range(3):
+                print(quiz(most_word(words)))
+                save_words(words)  # keeps the +1 in the file
+
+        elif user == 'repeted':
+            print(most_word(words))   # print added, save removed
+
+        elif user=='total':
+            print(len(words))
+
+        elif user=='wrong':
+            print(stats(words))
+
+        
+
+        elif user == 'q' or user == 'Q':
+            break
+        
+    
+
+        else:
+            print('wrong choice, try again')
+menu()
+
 
 
 
