@@ -53,6 +53,16 @@ def most_word(data):
     return pick[0]
 
 
+
+
+def stats(data):
+
+
+    
+    result= sorted(data,key=lambda s:s['wrong'],reverse=True)[:2]
+    return result
+
+
     
 words= load_words()
 # words.append(add_word())
@@ -63,9 +73,9 @@ words= load_words()
 # print(result)
 # print(words)
 most_wordd = most_word(words)
-print(most_wordd)
-
-
+# print(most_wordd)
+stats_result =stats(words)
+# print(stats_result)
 
 
 
