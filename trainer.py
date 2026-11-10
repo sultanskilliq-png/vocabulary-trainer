@@ -74,9 +74,9 @@ words= load_words()
 # print(words)
 most_wordd = most_word(words)
 # print(most_wordd)
-stats_result =stats(words)
-# print(stats_result)
-
+top =stats(words)
+print("Total:", len(words))
+print("Hardest:", top)
 
 
 
