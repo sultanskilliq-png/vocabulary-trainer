@@ -65,12 +65,9 @@ def most_word(data):
 
 
 def stats(data):
-
-
     
     result= sorted(data,key=lambda s:s['wrong'],reverse=True)[:5]
     return result
-
 
 
 def menu():
@@ -99,12 +96,9 @@ def menu():
             print(stats(words))
 
         
-
         elif user == 'q' or user == 'Q':
             break
         
-    
-
         else:
             print('wrong choice, try again')
 menu()
