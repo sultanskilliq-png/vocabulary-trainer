@@ -84,10 +84,10 @@ def menu():
         elif user == 'quiz':
             for i in range(3):
                 print(quiz(most_word(words)))
-                save_words(words)  # keeps the +1 in the file
+                save_words(words)  
 
         elif user == 'repeted':
-            print(most_word(words))   # print added, save removed
+            print(most_word(words))   
 
         elif user=='total':
             print(len(words))
