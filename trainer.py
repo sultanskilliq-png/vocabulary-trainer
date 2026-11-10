@@ -74,7 +74,7 @@ def menu():
     words = load_words() 
 
     while True:
-        user = input('add, quiz, repeted, total,  , q: ')
+        user = input('add, quiz, wrong ,repeted, total,  ,to quit (q or Q): ')
 
         if user == 'add':
     
